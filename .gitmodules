@@ -1,0 +1,3 @@
+[submodule "00_boot/u-boot-src"]
+	path = 00_boot/u-boot-src
+	url = https://github.com/u-boot/u-boot
