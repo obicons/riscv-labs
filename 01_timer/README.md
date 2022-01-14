@@ -70,8 +70,7 @@ steps:
    (machine interrupt enabled) register.
 To disable interrupts, you'll clear the same bits.
 
-### Activity
-Write two functions `enable_interrupts` and `disable_interrupts` that
+**Activity** Write two functions `enable_interrupts` and `disable_interrupts` that
 enable and disable interrupts. Inside of `main`, call
 `enable_interrupts`.
 
@@ -84,8 +83,7 @@ value. When `mtime >= mtimecmp` a timer interrupt is triggered.
 Qemu emulates the SiFive board's interrupt system by default. You can
 read about SiFive's implementation [here](https://www.manualslib.com/manual/1477612/Sifive-E31.html?page=24).
 
-### Activity
-Write two functions `uint64_t get_time()` and `void
+**Activity** Write two functions `uint64_t get_time()` and `void
 set_timer(uint64_t offset)` to get the current value of the `mtime`
 register and store an **offset** into the `mtimecmp` register.
 
@@ -106,8 +104,7 @@ handler. This causes GCC to emit code to save the CPU's register file
 before calling `interrupt_handler`. GCC also creates code to restore
 the CPU's register file when `interrupt_handler` returns.
 
-### Activity
-Use `interrupt_handler` to print a message to the screen every second.
+**Activity** Use `interrupt_handler` to print a message to the screen every second.
 
 ## Build a simple task system
 Let's use our timer interrupts to build a simple task system. We'll
@@ -155,8 +152,7 @@ unsigned long handle_trap(unsigned long epc,
 The return value of `handle_trap` is the new PC. The contents of the
 register file are copied back into the registers.
 
-### Activity
-Write the body of `handle_trap` to switch between tasks that are
+**Activity** Write the body of `handle_trap` to switch between tasks that are
 stored in the `tasks` global array. Test your code by defining a
 couple simple tasks that print a single character.
 
